@@ -277,8 +277,8 @@ $str_response .= '<tr><td colspan="7">SUMMARY</td></tr>';
 $str_response .= '</thead>';
 $str_response .= '<tbody>';
 
-$disabled = "";
-if (date("Y-m-d",strtotime($ofdate)) != date("Y-m-d",strtotime("+8 Hours"))) $disabled = "disabled";
+$disabled = "disabled";
+if (date("Y-m-d 00:00:00",strtotime($ofdate)) == date("Y-m-d 00:00:00")) $disabled = "";
 if ( ($fcutoff == 0) || ($fcutoff == 1) ) $str_response .= '<tr><td width="10%" colspan="2">First Cutoff:</td><td style="font-weight: bold;">' . round($_1cf,2) . '</td><td colspan="4">Actual Cash:&nbsp;<input type="text" id="acashfc" value="' . $actual_cash_fc . '" ' . $disabled . ' />&nbsp;<input type="submit" value="Update" ' . $disabled . ' onclick="updateActualFcf(' . $fbranch . ',\'' . $ofdate . '\');" /></td></tr>';
 if ($fcutoff == 2) $actual_cash_fc = 0;
 if ( ($fcutoff == 0) || ($fcutoff == 1) ) $fc_deficit = $_1cf - $actual_cash_fc;
