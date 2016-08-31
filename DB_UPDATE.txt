@@ -1,0 +1,1 @@
+ALTER TABLE `stock_in`  ADD `avon_rebate` DECIMAL(10,2) NOT NULL AFTER `sin_gross_amt`

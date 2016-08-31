@@ -1,0 +1,3 @@
+transaction.php
+*avon discount is categorized
+*recent version avon category is removed and CFT is used for all category
