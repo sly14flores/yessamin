@@ -278,7 +278,7 @@ $.ajax({
 content(6,0,'&fbranch=' + tb + '&fdate=' + fd);
 
 });
-var d2d = '<?php echo date("m/d/Y",strtotime("+8 Hour")); ?>';
+var d2d = '<?php echo date("m/d/Y"); ?>';
 </script>
 </head>
 <body>
